@@ -28,11 +28,37 @@
             .state('accounts.edit', {
                 templateUrl: 'accounts-edit.html'
             })
+            .state('accounts.del', {
+                templateUrl: 'accounts-del.html'
+            })
             .state('transactions', {
                 templateUrl: 'transactions.html'
             })
+            .state('accTrans', {
+                templateUrl: 'accTrans.html'
+            })
+            .state('accTrans.create', {
+                //url: '/list',
+                templateUrl: 'trans-create.html'
+            })
+            .state('accTrans.edit', {
+                templateUrl: 'trans-edit.html'
+            })
+            .state('accTrans.del', {
+                templateUrl: 'trans-del.html'
+            })
             .state('budgetItems', {
                 templateUrl: 'budgetItems.html'
+            })
+            .state('budgetItems.create', {
+                //url: '/list',
+                templateUrl: 'budgetItems-create.html'
+            })
+            .state('budgetItems.edit', {
+                templateUrl: 'budgetItems-edit.html'
+            })
+            .state('budgetItems.del', {
+                templateUrl: 'budgetItems-del.html'
             })
             .state('budget', {
                 templateUrl: 'budget.html'

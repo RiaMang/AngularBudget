@@ -211,6 +211,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="budgetItems-create.html" />
+    <Content Include="trans-create.html" />
+    <Content Include="budgetItems-del.html" />
+    <Content Include="trans-del.html" />
+    <Content Include="accounts-del.html" />
+    <Content Include="budgetItems-edit.html" />
+    <Content Include="trans-edit.html" />
+    <Content Include="accTrans.html" />
     <Content Include="accounts-edit.html" />
     <Content Include="accounts-create.html" />
     <Content Include="app\app.js" />
