@@ -7,10 +7,14 @@
 
     app.config(function ($stateProvider, $urlRouterProvider) {
 
-        //$urlRouterProvider.otherwise('/home');
+        //$urlRouterProvider.otherwise('index');
 
         $stateProvider
 
+            //.state('index', {
+
+            //    templateUrl: 'index.html'
+            //})
             .state('group', {
 
                 templateUrl: 'group.html'
@@ -19,7 +23,10 @@
                 templateUrl: 'dashboard.html'
             })
             .state('accounts', {
-                templateUrl: 'accounts.html'
+                templateUrl: 'accounts.html',
+                controller: function ($scope) {
+                    $scope.Accounts = ['Wells Fargo', 'Allegacy', 'BOA'];
+                }
             })
             .state('accounts.create', {
                 //url: '/list',

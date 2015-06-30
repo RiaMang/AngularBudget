@@ -12,7 +12,7 @@ namespace AngularBudget
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.IgnoreRoute(""); // Allow index.html to load on start.
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

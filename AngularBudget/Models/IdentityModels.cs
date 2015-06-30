@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace AngularBudget.Models
 {
@@ -23,6 +26,36 @@ namespace AngularBudget.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+        }
+
+        public DbSet<Household> Households { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<BudgetItem> BudgetItems { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Invitation> Invitations { get; set; }
+
+        public DbSet<CategoryType> CategoryTypes { get; set; }
+
+        public async Task<List<BudgetItem>> GetBudgetItems(int HId)
+        {
+            var HIdParam = new SqlParameter("@HId", HId);
+            return await this.Database
+                .SqlQuery<BudgetItem>("getBudgetItems @HId", HIdParam).ToListAsync();
+        }
+
+        public async Task<List<Household>> GetGroup(int HId)
+        {
+            var HIdParam = new SqlParameter("@HId", HId);
+            return await this.Database
+                .SqlQuery<Household>("getGroup @HId", HIdParam).ToListAsync();
+        }
+
+        public async Task<List<ApplicationUser>> GetUsers(int HId)
+        {
+            var HIdParam = new SqlParameter("@HId", HId);
+            return await this.Database
+                .SqlQuery<ApplicationUser>("getUsers @HId", HIdParam).ToListAsync();
         }
         
         public static ApplicationDbContext Create()

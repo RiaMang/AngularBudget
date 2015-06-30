@@ -33,11 +33,11 @@
                             <th>Delete </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody ng-repeat="acc in Accounts">
 
                         <tr>
                             <td>
-                                acc.Name
+                                {{acc}}
                             </td>
                             <td>
                                 acc.Balance

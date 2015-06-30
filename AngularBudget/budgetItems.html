@@ -1,5 +1,5 @@
 ﻿<h3>This is the budgetItems page</h3>
-<div>
+<div ng-controller="biCtrl as bic">
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <div class="well with-header  with-footer">
@@ -19,25 +19,25 @@
                             <th>
                                 Edit
                             </th>
-                            
+
                             <th>Delete </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody ng-repeat="bi in bic.budgetItems">
 
                         <tr>
                             <td>
-                                bi.Description
+                                {{bi.Name}}
                             </td>
                             <td>
-                                bi.Amount
+                                {{bi.Amount}}
                             </td>
                             <td>
-                                <a class="ed btn btn-default" ui-sref=".edit" href="" data-id="{{bi.Id}}" type="button"><i class="icon glyphicon glyphicon-edit"></i></a>
+                                <a class="ed btn btn-default" ui-sref=".edit" href="" type="button"><i class="icon glyphicon glyphicon-edit"></i></a>
                             </td>
 
                             <td>
-                                <a class="btn btn-default" ui-sref=".del" href="" data-id="{{bi.Id}}"><i class="icon glyphicon glyphicon-trash"></i></a>
+                                <a class="btn btn-default" ui-sref=".del" href=""><i class="icon glyphicon glyphicon-trash"></i></a>
 
                             </td>
                         </tr>
