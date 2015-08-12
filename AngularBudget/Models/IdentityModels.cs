@@ -57,6 +57,13 @@ namespace AngularBudget.Models
             return await this.Database
                 .SqlQuery<ApplicationUser>("getUsers @HId", HIdParam).ToListAsync();
         }
+
+        public async Task<List<Account>> GetAccounts(int HId)
+        {
+            var HIdParam = new SqlParameter("@HId", HId);
+            return await this.Database
+                .SqlQuery<Account>("getAccounts @HId", HIdParam).ToListAsync();
+        }
         
         public static ApplicationDbContext Create()
         {

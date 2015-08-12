@@ -24,9 +24,9 @@
             })
             .state('accounts', {
                 templateUrl: 'accounts.html',
-                controller: function ($scope) {
-                    $scope.Accounts = ['Wells Fargo', 'Allegacy', 'BOA'];
-                }
+                //controller: function ($scope) {
+                //    $scope.Accounts = ['Wells Fargo', 'Allegacy', 'BOA'];
+                //}
             })
             .state('accounts.create', {
                 //url: '/list',

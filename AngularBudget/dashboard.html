@@ -1,1 +1,165 @@
-﻿<h3>This is the dashboard page</h3>
+﻿
+<div class="page-body">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="databox bg-white radius-bordered">
+                        <div class="databox-left bg-themesecondary">
+                            <div class="databox-piechart">
+                                <div><span class="white font-90">Account</span></div>
+                                <div class="white font-90">Balances</div>
+                            </div>
+                        </div>
+                        <div class="databox-right">
+                            <span id="acc" style="font-size: xx-large; margin: 10px;" class="databox-number themesecondary">$28,000</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="databox bg-white radius-bordered">
+                        <div class="databox-left bg-themethirdcolor">
+                            <div class="databox-piechart">
+                                <div><span class="white font-90">Monthly</span></div>
+                                <div class="white font-90">Expenses</div>
+                            </div>
+                        </div>
+                        <div class="databox-right">
+                            <span id="exp" style="font-size: xx-large; margin: 10px;" class="databox-number themethirdcolor">$10,000</span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="databox bg-white radius-bordered">
+                        <div class="databox-left bg-themeprimary">
+                            <div class="databox-piechart">
+                                <div><span class="white font-90">Monthly</span></div>
+                                <div class="white font-90">Budget</div>
+                            </div>
+                        </div>
+                        <div class="databox-right">
+                            <span id="bud" style="font-size: xx-large; margin: 10px;" class="databox-number themeprimary">$15,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-----Table-->
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="widget">
+                <div class="widget-header bordered-bottom bordered-blue">
+                    <span class="widget-caption"> Recent Transactions(Last 7 days)</span>
+                </div>
+                <div class="widget-body">
+                    <table id="Trans" class="display">
+                        <thead class="bordered-darkorange">
+                            <tr>
+                                <th>
+                                    TransDate
+                                </th>
+                                <th>
+                                   Description
+                                </th>
+                                <th>
+                                    Category
+                                </th>
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    RecAmount
+                                </th>
+                                <th>
+                                    UpdatedBy
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            
+                            <tr>
+                                <td>
+                                    TransDate
+                                </td>
+                                <td>
+                                    Description
+                                </td>
+                                <td>
+                                    Category
+                                </td>
+                                <td>
+                                    Amount
+                                </td>
+                                
+                                <td><label><input type="checkbox" checked /></label></td>
+                                
+                                <td>
+                                    RecAmount
+                                </td>
+                                
+                                <td>
+                                    UpdatedBy
+                                </td>
+                            </tr>
+                            
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---End Table-->
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="widget">
+                <div class="widget-header bordered-bottom bordered-blue">
+                    <span class="widget-caption"> Expenses Vs Budget for the month</span>
+                </div>
+                <div class="widget-body">
+                    <div id="chart1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="widget">
+                <div class="widget-header bordered-bottom bordered-blue">
+                    <span class="widget-caption"> Expenses for the Month</span>
+                </div>
+                <div class="widget-body">
+                    <div id="chart2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption"> Monthly Expenses, Income and Budget</span>
+            </div>
+            <div class="widget-body">
+                <div id="MonthlyChart">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

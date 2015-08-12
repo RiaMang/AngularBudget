@@ -9,7 +9,7 @@
 
 </div>-->
 
-<div class="container">
+<div class="container" ng-controller="aCtrl as a">
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <div class="well with-header  with-footer">
@@ -33,14 +33,14 @@
                             <th>Delete </th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="acc in Accounts">
+                    <tbody ng-repeat="acc in a.accounts">
 
                         <tr>
                             <td>
-                                {{acc}}
+                                {{acc.Name}}
                             </td>
                             <td>
-                                acc.Balance
+                                {{acc.Balance}}
                             </td>
                             <td>
                                 <a class="ed btn btn-default" ui-sref=".edit" href="" data-id="{{acc.Id}}" type="button"><i class="icon glyphicon glyphicon-edit"></i></a>

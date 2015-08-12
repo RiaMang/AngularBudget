@@ -1,5 +1,11 @@
-﻿<h3>This is the group page</h3>
+﻿
 <div ng-controller="gCtrl as g">
     <p> The Household Name is: {{g.hh.Name}}</p>
-    <p>This is where a list of users would go.</p>
+    <p>The Users in this group are: </p>
+    <ul>
+        <li ng-repeat="user in g.users">
+            {{user.Name}}
+            {{user.Email}}
+        </li>
+    </ul>
 </div>
